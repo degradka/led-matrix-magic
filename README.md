@@ -1,6 +1,10 @@
-# LED Matrix Magic
+<div align="center">
+  <h1>LED Matrix Magic</h1>
+</div>
 
-![Result](images/result.jpg)
+<div align="center">
+  <img src="images/result.jpg" alt="Result" style="width: 40%; height: auto;">
+</div>
 
 Welcome to **LED Matrix Magic**! This project brings a 16x16 LED matrix to life using WS2812B LED strips, an ESP8266 microcontroller, and a slick web interface. This README will guide you through setting up and running your own LED matrix display.
 
@@ -12,9 +16,9 @@ Welcome to **LED Matrix Magic**! This project brings a 16x16 LED matrix to life 
 - [Software Requirements](#software-requirements)
 - [Setup Instructions](#setup-instructions)
 - [Usage](#usage)
+- [The Result](#the-result)
 - [Contributing](#contributing)
 - [License](#license)
-- [Gallery](#gallery)
 
 ## Overview
 
@@ -36,6 +40,11 @@ Welcome to **LED Matrix Magic**! This project brings a 16x16 LED matrix to life 
 - **Power Supply**: Suitable for the number of LEDs (e.g., 5V 10A for 256 LEDs).
 - **Miscellaneous**: Wires, connectors, soldering tools, etc.
 - **3D Printed Parts**: Designed and printed to hold the LED strips and components. STL files are available in the `stl` folder.
+
+- **Connection schematic**: Smaller matrix for better visual comprehension.
+  <div align="center">
+    <img src="images/schematic.png" alt="Connection schematic" style="width: 50%; height: auto;">
+  </div>
 
 ## Software Requirements
 
@@ -87,15 +96,10 @@ Welcome to **LED Matrix Magic**! This project brings a 16x16 LED matrix to life 
     - Click the "Clean All" button to reset the matrix.
     - Check out the premade effects by pressing the buttons under "Preset Effects".
 
-## Gallery
-
-Here are some images of the project in action:
-
-### Schematic
-![Schematic](images/schematic.png)
-
-### Website Controller
-![Website Controller](images/website_controller.jpg)
+## The Result
+<div align="center">
+    <img src="images/website_controller.jpg" alt="Website controller" style="width: 75%; height: auto;">
+</div>
 
 ## Contributing
 
@@ -104,5 +108,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
