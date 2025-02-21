@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>LED Matrix Control</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="/styles.css">
+	<script src="/script.js" defer></script>
+</head>
+
+<body>
+	<h1 id="title">LED Matrix Controller</h1>
+	<div class="tools">
+		<button id="brushTool" class="tool-btn active" onclick="setTool('brush')"><i class="fas fa-paint-brush"></i></button>
+		<button id="pickerTool" class="tool-btn" onclick="setTool('picker')"><i class="fas fa-eye-dropper"></i></button>
+		<button id="fillTool" class="tool-btn" onclick="setTool('fill')"><i class="fas fa-fill-drip"></i></button>
+		<button id="eraserTool" class="tool-btn" onclick="setTool('eraser')"><i class="fas fa-eraser"></i></button>
+		<select id="brushSize" onchange="setBrushSize(this.value)">
+			<option value="1">1x1</option>
+			<option value="2">2x2</option>
+			<option value="3">3x3</option>
+		</select>
+	</div>
+	<div class="settings">
+		<button class="theme-btn" onclick="toggleTheme()"> <i class="fas fa-moon"></i> </button>
+		<button class="lang-btn" onclick="toggleLanguage()"> <i class="fas fa-globe"></i> </button>
+	</div>
+	<div class="online-users" id="onlineUsers">
+		<h3 id="onlineTitle">Online Users</h3>
+		<ul id="onlineList"></ul>
+	</div>
+	<div class="leaderboard" id="leaderboard">
+		<h3 id="leaderboardTitle">Leaderboard</h3>
+		<ul id="leaderboardList"></ul>
+	</div>
+	<div class="center-wrapper">
+		<div class="matrix-container">
+			<div class="grid-overlay">
+				<div class="grid"></div>
+				<canvas id="matrixCanvas" width="320" height="320"></canvas>
+			</div>
+			<button class="clean-btn" onclick="showCleanPopup()"> <i class="fas fa-trash"></i> </button>
+			<button class="save-btn" onclick="saveDrawing()"> <i class="fas fa-save"></i> </button>
+		</div>
+		<div class="color-picker" id="colorPicker"></div>
+	</div>
+	<div class="gallery" id="gallery">
+		<h3 id="galleryTitle">Gallery</h3>
+		<div class="gallery-items" id="galleryItems"></div>
+	</div>
+	<div class="popup" id="cleanPopup">
+		<div class="popup-content">
+			<p id="cleanMessage">Are you sure? There might be something beautiful drawn that you'll destroy!</p>
+			<div class="popup-buttons">
+				<button class="popup-btn" onclick="confirmClean()">Yes</button>
+				<button class="popup-btn cancel" onclick="hideCleanPopup()">No</button>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="nicknamePopup">
+		<div class="popup-content">
+			<p id="nicknameMessage">Please enter your nickname:</p>
+			<input type="text" class="nickname-input" id="nicknameInput" maxlength="20">
+			<div class="popup-buttons">
+				<button class="popup-btn" onclick="saveNickname()">OK</button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
