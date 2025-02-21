@@ -53,7 +53,8 @@ LED Matrix Magic lets you draw on a 16x16 LED matrix with a web app. The Wemos D
 1. **Clone the Repo**:
    ```sh
    git clone https://github.com/degradka/led-matrix-magic.git
-   cd led-matrix-magic```
+   cd led-matrix-magic
+   ```
 2. **Wemos Setup**:
 	- Open `led-matrix-magic.ino` in Arduino IDE.
 	- Install `FastLED` and `ArduinoJson` via **Sketch > Include Library > Manage Libraries**.
